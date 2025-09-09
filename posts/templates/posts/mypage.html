@@ -1,0 +1,17 @@
+{% extends './base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'posts/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'posts/css/mypage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="mypage-info">
+    <h2>마이페이지</h2>
+    <p><strong>아이디:</strong> {{ user_obj.username }}</p>
+    <p><strong>닉네임:</strong> {{ user_obj.nickname }}</p>
+    <p><strong>이메일:</strong> {{ user_obj.email }}</p>
+    {% if user.id == user_obj.id %}
+        <a href="{% url 'logout' %}" class="logout-btn">로그아웃</a>
+    {% endif %}
+</div>
+{% endblock %}

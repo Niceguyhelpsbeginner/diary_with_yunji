@@ -1,0 +1,42 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'posts/css/post_list.css' %}">
+{% endblock css %}
+
+{% comment %} {% block logo_text %}
+    <div id="header">
+        <div class="container">
+            <h1><img src="{% static 'posts/images/headertxt.png' %}"></h1>
+        </div>
+    </div>
+{% endblock logo_text %} {% endcomment %}
+
+
+
+{% block content %}
+    <div class="btn_post">
+        <a href="{% url 'post-create'%}">글쓰기</a>
+    </div>
+
+    {% if posts %}
+    <div class="post_container">
+        {% for post in posts %}
+            <div class="post"><a href="{% url 'post-detail' post.id %}">         
+                <h2 class="title">{{post.title}}</h2>
+                <p class="date">{{post.dt_created}}</p>
+                <p class="text">{{post.content|slice:":100"}}</p>
+            </a></div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class='blank'>
+        <p>
+            보여줄 글이 없어요!<br>
+            첫 글을 작성해보면 어떨까요?
+        </p>
+    </div>
+    {% endif %}
+    
+{% endblock content %}
