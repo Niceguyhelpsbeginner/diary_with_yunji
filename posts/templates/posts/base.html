@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="btn_post" style="display:flex; gap:10px; align-items:center;">
                     {% if user.is_authenticated %}
-                        <a href="{% url 'mypage' user.id %}">마이페이지</a>
-                        <a href="{% url 'logout' %}">로그아웃</a>
+                        <a href="{% url 'mypage' user.id %}" class="btn_post" style="border:1px solid #5b595f">마이페이지</a>
+                        <a href="{% url 'logout' %}" class="btn_post" style="border:1px solid #5b595f">로그아웃</a>
                     {% else %}
                         <a href="{% url 'register' %}">회원가입</a>
                         <a href="{% url 'login' %}">로그인</a>

@@ -1,0 +1,40 @@
+/* 마이페이지 전용 스타일 */
+.mypage-info {
+    max-width: 400px;
+    margin: 60px auto;
+    background: rgba(38, 37, 42, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    padding: 32px 28px 24px 28px;
+    color: #fff;
+    text-align: center;
+    font-family: 'NanumMyeongjo', serif;
+}
+.mypage-info h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.mypage-info p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #fff;
+}
+.mypage-info .logout-btn {
+    display: inline-block;
+    background: #e38917;
+    color: #fff;
+    border: 1px solid #5b595f;
+    border-radius: 1px;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 24px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.mypage-info .logout-btn:hover {
+    background: #c67814;
+    color: #ccc;
+}

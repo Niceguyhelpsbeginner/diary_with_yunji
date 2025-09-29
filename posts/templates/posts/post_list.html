@@ -21,7 +21,7 @@
     </div>
 
     {% if posts %}
-    <div class="post_container">
+    <div class="post_container post_item">
         {% for post in posts %}
             <div class="post"><a href="{% url 'post-detail' post.id %}">         
                 <h2 class="title">{{post.title}}</h2>
