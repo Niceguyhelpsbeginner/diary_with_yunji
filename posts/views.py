@@ -83,9 +83,7 @@ def register(request):
             user = form.save()
             login(request, user)
             return redirect('post-list')
-        else:
-            print("form is not valid")
-        form = CustomUserCreationForm()
+    form = CustomUserCreationForm()
     return render(request, 'posts/register.html', {'form': form})
 
 class CustomLoginView(LoginView):
