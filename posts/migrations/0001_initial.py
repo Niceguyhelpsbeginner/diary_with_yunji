@@ -13,7 +13,6 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('auth', '0012_alter_user_first_name_max_length'),
     ]
 
     operations = [
@@ -22,7 +21,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(error_messages={'unique': '중복되는 제목입니다.'}, max_length=50, unique=True)),
-                ('content', models.TextField(validators=[django.core.validators.MinLengthValidator(10, '너무 짧아요, 10자이상 적어주세요!'), posts.validators.validate_symbols])),
+                ('content', models.TextField(validators=[django.core.validators.MinLengthValidator(5, '너무 짧아요, 5자이상 적어주세요!'), posts.validators.validate_symbols])),
                 ('dt_created', models.DateTimeField(auto_now_add=True, verbose_name='Date Created')),
                 ('dt_modified', models.DateTimeField(auto_now=True, verbose_name='Date Modified')),
             ],

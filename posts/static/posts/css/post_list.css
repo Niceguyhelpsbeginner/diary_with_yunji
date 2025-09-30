@@ -70,6 +70,16 @@ h1 img{
 .btn_post{
     text-align: right;
 }
+.btn_post a{
+    display: inline-block;
+    margin-bottom: 27px;
+    padding: 10px 43px 11px 19px; 
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid #5b595f;
+    border-radius: 1px;
+    background: url(../images/pen.svg)no-repeat 75px 11px/16px;
+}
 .btn_post a:hover{
     color: #ccc;
     transition: all 0.2s;
@@ -84,10 +94,8 @@ h1 img{
 }
 .post{
     background: #26252a;
-    /* padding: 30px 29px 40px 27px; */
+    padding: 30px 29px 40px 27px;
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.09);
-    border:1px solid #3a3940;
-    border-radius: 4px;
 }
 .post:hover{
     background: rgba(41, 40, 46, 0.8);
@@ -102,8 +110,7 @@ h1 img{
     overflow: hidden; 
     text-overflow: 
     ellipsis; display: 
-    -webkit-box; 
-    -webkit-line-clamp: 2; 
+    -webkit-box; -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical; word-wrap:break-word;
 }
 .post .date{
@@ -123,17 +130,6 @@ h1 img{
     ellipsis; display: 
     -webkit-box; -webkit-line-clamp: 5; 
     -webkit-box-orient: vertical; word-wrap:break-word;
-}
-
-.btn_post a{
-    display: inline-block;
-    margin-bottom: 27px;
-    padding: 10px 43px 11px 19px; 
-    font-size: 15px;
-    color: #fff;
-    border: 1px solid #5b595f;
-    border-radius: 1px;
-    background: url(../images/pen.svg)no-repeat 75px 11px/16px;
 }
 .paging{
     text-align: center;
@@ -200,15 +196,4 @@ h1 img{
     font-weight: 800;
     letter-spacing: -0.85px;
     color: #53534f;
-}
-
-.post_item{
-    
-    display: inline-block;
-    margin-bottom: 27px;
-    padding: 10px 43px 11px 19px; 
-    font-size: 15px;
-    color: #fff;
-    border: 1px solid #5b595f;
-    border-radius: 1px;
 }

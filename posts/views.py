@@ -75,13 +75,16 @@ def index(request):
     return redirect('post-list')
 
 def register(request):
+    print("register view called")
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
+            print("form is valid")
             user = form.save()
             login(request, user)
             return redirect('post-list')
-    else:
+        else:
+            print("form is not valid")
         form = CustomUserCreationForm()
     return render(request, 'posts/register.html', {'form': form})
 
